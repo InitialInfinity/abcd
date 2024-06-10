@@ -1,0 +1,96 @@
+﻿@model InternationFamilyWeb.Models.LoginModel
+@{
+	
+	ViewBag.Title = "Index";
+	Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+
+	<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+	<link rel="stylesheet" href="~/InternationFamilyWeb.styles.css" asp-append-version="true" />
+	<!-- Favicons -->
+	<link href="assets/img/favicon.png" rel="icon">
+	<link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+	<!-- Vendor CSS Files -->
+	<link href="~/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="~/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+	<link href="~/assets/vendor/aos/aos.css" rel="stylesheet">
+	<link href="~/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+	<link href="~/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+	<link href="~/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+	<script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/jsfolder/login/login.js"></script>
+	<!-- Template Main CSS File -->
+	<link href="~/assets/css/main.css" rel="stylesheet">
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+		<script src="~/assets/js/html5shiv.min.js"></script>
+		<script src="~/assets/js/respond.min.js"></script>
+	<![endif]-->
+	<script type="text/javascript">
+		if ('@TempData["Message"]' == "Invalid Username and password")
+			alert('@TempData["Message"]');
+	</script>
+</head>
+<body >
+	<div class="wrapper">
+		<div class="container main">
+			<div class="row">
+				<div class="col-lg-6 side-image">
+					
+				</div>
+				<div class="col-md-6 right">
+					<div class="input-box">
+						
+						<header>Login</header>
+							
+						<div class="input-field">
+							
+
+							<input class="input" id="sUserName" asp-for="sUserName">
+							<label class="focus-label">Username<span style="color:red;" > *</span></label>
+
+						</div>
+						<div class="input-field">
+							<input class="input" id="sPassword" asp-for="sPassword">
+							<label class="focus-label">Password<span style="color:red;"> *</span></label>
+						</div>
+						<div class="input-field">
+							<input type="submit" class="submit" value="sign up" onclick="return submit()" />
+						
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+	<!-- jQuery -->
+	
+    <script src="~/assets/js/jquery-3.6.0.min2.js"></script>
+  
+    <script src="~/vendor/jquery/jquery.min.js"></script>
+	<script src="~/vendor/jquery/jquery.min.js"></script>
+	<script src="~/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  
+
+   
+	@* <script src="~/assets/js/scripts.bundle.js"></script> *@
+	<!-- Core plugin JavaScript-->
+	<script src="~/vendor/jquery-easing/jquery.easing.min.js"></script>
+</body>
+</html>
